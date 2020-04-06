@@ -1,0 +1,28 @@
+{
+    "persons": [
+      {
+        "Nom": "Choukri",
+        "Prenom": "Mohamed Elmehdi",
+        "Cin": "hh112313",
+        "qualite": "Etudiant",
+        "tel": "0614075409",
+        "submit": "true"
+      },
+      {
+        "Nom": "Hamdaoui",
+        "Prenom": "Mohamed Elmehdi",
+        "Cin": "hh112313",
+        "qualite": "Etudiant",
+        "tel": "0614075409",
+        "submit": "true"
+      },
+      {
+        "Nom": "Hamdaoui",
+        "Prenom": "Mohamed Elmehdi",
+        "Cin": "hh112313",
+        "qualite": "Etudiant",
+        "tel": "0614075409",
+        "submit": "true"
+      }
+    ]
+  }

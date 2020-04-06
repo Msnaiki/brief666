@@ -1,0 +1,106 @@
+//error style
+.error
+{
+    color:red;
+    font-size: 20px;
+}
+
+
+/*Page SinguP*/
+
+
+
+.signTitle
+{
+    font-size: 25px;
+    color:#007bff;
+    text-align: center;
+    margin-top: 25px;
+}
+.container
+{
+    margin-top: 20px;
+    .div_btn
+    {
+       text-align: center !important;  
+        .btn-envoyer
+        {
+                width:150px;
+               
+        } 
+    }
+}
+/*Page Ajouter Question */
+
+.Class_Theme
+{
+    .Class_Theme--container
+    {
+        border-top: 1px solid black;
+        padding : 20px;
+        div
+        {
+            padding:10px;
+        }
+    }
+}
+.Class_Lieu
+{
+    .Class_Lieu--container
+    {
+        border-top: 1px solid black;
+        padding : 20px;
+        div
+        {
+            padding:10px;
+        }
+    }
+}
+.Class_Contenu
+{
+    .Class_Contenu--container
+    {
+        border-top: 1px solid black;
+        padding : 20px;
+        div
+        {
+            padding:10px;
+        }
+    }
+}
+
+//Footer
+.container-footer_newsLetter
+{
+    width:100%;
+    height:200px;
+    background-image: url('../Images/footer/tajine.png');
+    background-size: 100% 100%;
+    h1
+    {
+        font-size: 30px;
+        
+    }
+    h2
+    {
+        font-size: 25px;
+    }
+    h1,h2 {
+        color:white;
+        text-align: center;
+
+    }
+    .container-footer_newsLetter-inputs
+    {
+        margin:auto;
+        width:25%;
+        display: block;
+         
+       button
+       {
+           margin-top: 25px;
+       }
+       
+    }
+     
+}

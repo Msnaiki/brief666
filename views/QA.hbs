@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Style/style1.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>Questions</title>
+</head>
+<body>
+  <style>
+  .error {
+  color: red;
+  font-size: 20px;
+}
+
+/*Page SinguP*/
+legend {
+  font-size: 25px;
+  color: #007bff;
+  text-align: center;
+  margin-top: 25px;
+}
+
+.container {
+  margin-top: 20px;
+  
+}
+
+.container .div_btn {
+  margin-top: 65px;
+  text-align: center !important;
+}
+
+.container .div_btn .btn-envoyer {
+  width: 150px;
+  
+}
+#footer
+{
+  margin-top: 200px !important ;
+}
+
+</style>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#"><img id="logo" src="images/logo.png" alt="logo"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Accueil <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Presentation</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">E-Services</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Activités</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-globe-europe"></i>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#">Arabe</a>
+                  <a class="dropdown-item" href="#">Francais</a>
+                </div>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Chercher" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
+          </form>
+        </div>
+      </nav>
+ 
+
+   <!--  <h1 class="signTitle">S’ENREGISTRER</h1>  <input type="text" id="id_theme" name="name_theme">-->
+    <div class="container">
+        <form id="form_qa" method="POST" action="/submit1.0">
+             <!-- Section Theme  -->
+            <div class="Class_Theme">
+                <fieldset>
+
+                    <legend>Département</legend>
+                    <div class="Class_Theme--container">
+                        
+                   <div>
+                    <label for="">Selectionner le département <span>*</span></label> <select name="name_dep" id="id_dep" class="form-control"><option value="0">Selectionner...</option>
+                         {{#each Departement_Data}}
+                            <option>{{this.Nom}}</option>
+                        {{/each}}
+                    </select>
+                    <span id="err_dep"></span>
+                   </div>
+              
+                  </div>
+                
+
+
+                </fieldset>
+                </div>
+ 
+                <!-- Section Lieu  -->
+                <div class="Class_Lieu">
+                <fieldset>
+
+                    <legend>Lieu concerné</legend>
+                    <div class="Class_Lieu--container">
+                        
+                   <div>
+                    <label for="">Province ou préfecture : <span>*</span></label> <select name="name_prov" id="id_prov" class="form-control"> 
+                        
+                    </select>
+                    <span id="err_province"></span>
+                   </div>
+                  <div>
+                    <label for="">Commune : <span>*</span></label> <select name="name_commune" id="id_commune" class="form-control">
+                        
+                    </select>
+                    <span id="err_commune"></span>
+                    </div>
+                  </div>
+
+
+                </fieldset>
+            </div>
+            <!-- Section contenu -->
+            <div class="Class_Contenu">
+                <fieldset>
+                    <legend>Contenu</legend>
+
+                 <div class="Class_Contenu--container">
+                  <div>
+                    <label for="">N° Carte d'identité nationale :</label> <input type="text" id="id_cin"  class="form-control" name="name_cin">
+                  </div>
+                  <span id="err_cin"></span>
+                    <div>
+                        <label for="">Objet :</label> <input type="text" id="id_objet"  class="form-control" name="name_objet">
+                      </div>
+                      <span id="err_obj"></span>
+                      <div>
+                        <label for="">Message :</label> <textarea name="name_message" id="id_msg" class="form-control" id="id_message" cols="30" rows="10"></textarea>
+    
+                      </div>
+                      <span id="err_msg"></span>
+                 </div>
+
+                </fieldset>
+         
+                <div class="div_btn">
+                    <button   id="btn_qa" class="btn btn-primary btn-envoyer important">Envoyer</button>
+                </div>
+            </div>
+          
+            
+        </form>
+      
+              <!-- Section filter  -->
+       
+      <!-- Section question  -->
+      
+            <div class="Class_Theme">
+                <fieldset>
+
+                    <legend>Questions Récentes</legend>
+                    <form method="POST" action="QA.hbs">
+                       <input type="submit" value="filtrer">
+                    <select name="name_depp" id="id_dep" class="form-control"><option value="0">Selectionner...</option>
+                         {{#each Departement_Data}}
+                            <option>{{this.Nom}}</option>
+                        {{/each}}
+                    </select>
+                    </form>
+                   
+
+                    
+                    <div class="Class_Theme--container">
+                        
+                   <div>
+                    
+                         {{#each Question_Data}}
+                            <h1>{{this.province}}</h1>
+                            <p>{{this.commune}}</p>
+                        {{/each}}
+                   
+                    <span id="err_dep2"></span>
+                   </div>
+              
+                  </div>
+                
+
+
+                </fieldset>
+                </div>
+ 
+        </div>
+
+      
+          <div id="footer">
+        <div class="container1">
+            <div class="content">
+                <div class="left">
+                    <p>© 2016 - Agence Urbaine SAFI-YOUSSOUFIA</p>
+                </div>
+                <div class="center">
+                    <p>Conditions Générales d’Utilisation</p>
+                </div>
+                <div class="right">
+                    <img src="images/facebook.png" alt="">
+                    <img src="/images/twitter.png" alt="">
+                    <img src="/images/rss.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+        <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="../Script/main.js"></script>
+</body>
+</html>
