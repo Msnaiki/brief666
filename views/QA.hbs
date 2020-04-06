@@ -171,29 +171,32 @@ legend {
               <!-- Section filter  -->
        
       <!-- Section question  -->
-      
+      <div class="space" style="height:5vh; width:100%"></div>
             <div class="Class_Theme">
+              
                 <fieldset>
 
                     <legend>Questions Récentes</legend>
-                    <form method="POST" action="QA.hbs">
-                       <input type="submit" value="filtrer">
-                    <select name="name_depp" id="id_dep" class="form-control"><option value="0">Selectionner...</option>
+                    <form method="Post" action="QA.hbs">
+                       
+                        <select name="name_depp" id="id_dep" class="form-control"><option value="0">Selectionner...</option>
                          {{#each Departement_Data}}
                             <option>{{this.Nom}}</option>
                         {{/each}}
-                    </select>
+                        </select>
+                        <div class="space" style="height:5vh; width:100%"></div>
+                        <input type="submit" value="filtrer" class="btn btn-primary btn-envoyer important">
                     </form>
                    
 
                     
                     <div class="Class_Theme--container">
-                        
+                     <div class="space" style="height:5vh; width:100%"></div>   
                    <div>
                     
                          {{#each Question_Data}}
-                            <h1>{{this.province}}</h1>
-                            <p>{{this.commune}}</p>
+                            <h1 class="display-3" style="font-size: 3em;">{{this.objet}}</h1>
+                            <p class="display-4" style="font-size: 1em;">{{this.msg}}</p>
                         {{/each}}
                    
                     <span id="err_dep2"></span>

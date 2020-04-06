@@ -52,6 +52,12 @@ app.get("/Signup.hbs", (req, res) => {
   app.get('/index',function(req,res) {
     res.sendFile(path.join(__dirname+'/index.html'));
   });
+  app.use(bodyParser.urlencoded({
+    extended: true
+}));
+
+// accept json 
+app.use(bodyParser.json());
 
 // Port
 var port = process.env.PORT || 3000;
